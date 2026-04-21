@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{on\PYGZus{}gate\PYGZus{}dropped}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{gate\PYGZus{}type}\PYG{p}{,} \PYG{n}{qubit\PYGZus{}index}\PYG{p}{,} \PYG{n}{time\PYGZus{}index}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{gate\PYGZus{}type} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}CX\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}CY\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}CZ\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}CH\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}SWAP\PYGZdq{}}\PYG{p}{]:}
+        \PYG{n}{target\PYGZus{}index} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{view}\PYG{o}{.}\PYG{n}{show\PYGZus{}input\PYGZus{}dialog}\PYG{p}{(}
+            \PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}}\PYG{n}{gate\PYGZus{}type}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ Gate\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Select Target Qubit:\PYGZdq{}}\PYG{p}{)}
+        \PYG{c+c1}{\PYGZsh{} Validation and path clearance checks...}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{add\PYGZus{}gate}\PYG{p}{(}\PYG{n}{gate\PYGZus{}type}\PYG{p}{,} \PYG{n}{qubit\PYGZus{}index}\PYG{p}{,} \PYG{n}{time\PYGZus{}index}\PYG{p}{,}
+                          \PYG{n}{target\PYGZus{}index}\PYG{p}{,} \PYG{n}{params}\PYG{p}{,} \PYG{n}{matrix}\PYG{p}{)}
+\end{Verbatim}

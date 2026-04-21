@@ -1,0 +1,129 @@
+\contentsline {chapter}{Declaration}{i}{chapter*.1}%
+\contentsline {chapter}{Acknowledgements}{ii}{chapter*.2}%
+\contentsline {chapter}{AI Disclosure}{iii}{chapter*.3}%
+\contentsline {chapter}{Abstract}{iv}{chapter*.4}%
+\contentsline {chapter}{List of Figures}{x}{chapter*.4}%
+\contentsline {chapter}{List of Tables}{xi}{chapter*.4}%
+\contentsline {part}{I\hspace {1em}Foundations and Circuit Model}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Foundations}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Quantum Computation and Quantum Information}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Scope and Organisation}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Three Models of Computation}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Dirac Notation}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Hilbert Spaces}{4}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Inner Product on $\mathbb {C}^n$}{4}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Operators}{4}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Normal Operators}{4}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Unitary Operators}{4}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Hermitian Operators}{4}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}The Four Postulates}{5}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Quantum model of computation}{8}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Quantum Bits}{8}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Single qubits}{8}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Single-qubit gates}{8}{subsection.1.9.2}%
+\contentsline {subsubsection}{\numberline {1.9.2.1}Pauli Operators}{9}{subsubsection.1.9.2.1}%
+\contentsline {subsection}{\numberline {1.9.3}Multi-qubits}{9}{subsection.1.9.3}%
+\contentsline {subsection}{\numberline {1.9.4}Multi-qubit gates}{9}{subsection.1.9.4}%
+\contentsline {section}{\numberline {1.10}Global and Relative Phase}{10}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Conclusion to Foundations}{10}{section.1.11}%
+\contentsline {chapter}{\numberline {2}Circuits}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Circuit Structure and Complexity}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Universality}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Universal Sets}{12}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Toffoli Gate}{12}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}CNOT, H, T}{12}{subsubsection.2.2.1.2}%
+\contentsline {section}{\numberline {2.3}Universality comes with a catch ---Approximation}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Not all gate sets make the cut for Universality}{13}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Decomposition of Single-Qubit Unitaries}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Z-Y Decomposition}{14}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}The Z-X Variant}{14}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}The X-Y Variant}{15}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}$ABC$ Factorisation}{15}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Universality of Single-Qubit Gates and CNOT}{16}{section.2.7}%
+\contentsline {section}{\numberline {2.8}The Gray Code Argument for $n$-Qubit Universality}{17}{section.2.8}%
+\contentsline {section}{\numberline {2.9}The KAK Decomposition}{19}{section.2.9}%
+\contentsline {section}{\numberline {2.10}The Cosine-Sine Decomposition}{20}{section.2.10}%
+\contentsline {section}{\numberline {2.11}The Cartan Decomposition}{21}{section.2.11}%
+\contentsline {section}{\numberline {2.12}The Kraus-Cirac Decomposition}{22}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Summary}{23}{section.2.13}%
+\contentsline {part}{II\hspace {1em}Optimality}{24}{part.2}%
+\contentsline {chapter}{\numberline {3}Optimal Decomposition of Unitary Operators}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Optimal Two-Qubit Gate Synthesis}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Problem and What Was Known}{25}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Why Three Parameters Require Three CNOTs}{26}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}The Three Tiers: Vatan and Williams}{27}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}What the Two Papers Together Give Us}{28}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}The Entanglement Structure of Three-Qubit States}{28}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}SLOCC Classification: Dür, Vidal, and Cirac}{28}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Why This Matters for Gate Synthesis}{29}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The Generalised Schmidt Decomposition: Acín et al.}{30}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}The Toffoli Gate: A Three-Qubit Lower Bound}{31}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}The Gate and the Problem}{31}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}The Rank Argument}{31}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Connection to Entanglement Structure}{32}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Uniformly Controlled Rotations and Asymptotic Optimality}{33}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Uniformly Controlled Rotations}{33}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Decomposing a UCR into CNOTs}{33}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}The Full Decomposition and Gate Count}{34}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Beyond the Quantum Shannon Decomposition: Block-ZXZ}{35}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}The Quantum Shannon Decomposition and Its Limit}{35}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Block-ZXZ Structure}{35}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Connection to Part\nobreakspace {}I}{36}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Conclusion to Part II}{36}{section.3.6}%
+\contentsline {part}{III\hspace {1em}Quantum Composer}{38}{part.3}%
+\contentsline {chapter}{\numberline {4}Open Quantum Composer Pro}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Background}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Problem Statement}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Objectives}{39}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Related Work}{40}{section.4.5}%
+\contentsline {section}{\numberline {4.6}System Architecture}{40}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Directory Structure}{40}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Model Layer}{40}{section.4.8}%
+\contentsline {section}{\numberline {4.9}View Layer}{41}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Controller Layer}{41}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Implementation Details}{41}{section.4.11}%
+\contentsline {section}{\numberline {4.12}GUI Framework Selection}{41}{section.4.12}%
+\contentsline {section}{\numberline {4.13}Quantum Computing Framework}{41}{section.4.13}%
+\contentsline {section}{\numberline {4.14}Key Implementation Features}{42}{section.4.14}%
+\contentsline {section}{\numberline {4.15}Drag-and-Drop Circuit Design}{42}{section.4.15}%
+\contentsline {section}{\numberline {4.16}Multi-Qubit Gate Support}{42}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Rotation Gates with Parameters}{42}{subsection.4.16.1}%
+\contentsline {section}{\numberline {4.17}Two-Way Code Synchronization}{43}{section.4.17}%
+\contentsline {section}{\numberline {4.18}System Features}{43}{section.4.18}%
+\contentsline {section}{\numberline {4.19}Gate Library}{43}{section.4.19}%
+\contentsline {section}{\numberline {4.20}Simulation Capabilities}{43}{section.4.20}%
+\contentsline {section}{\numberline {4.21}Export Functionality}{44}{section.4.21}%
+\contentsline {section}{\numberline {4.22}Testing Approach}{44}{section.4.22}%
+\contentsline {section}{\numberline {4.23}Results and Discussion}{45}{section.4.23}%
+\contentsline {section}{\numberline {4.24}Technical Stack}{45}{section.4.24}%
+\contentsline {section}{\numberline {4.25}Future Work}{45}{section.4.25}%
+\contentsline {section}{\numberline {4.26}Conclusion to Open Quantum Composer Pro}{45}{section.4.26}%
+\contentsline {chapter}{\numberline {5}Conclusion}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of Thesis}{47}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Operator Decompositions}{48}{appendix.A}%
+\contentsline {section}{\numberline {A.1}The Hierarchy of Operators}{48}{section.A.1}%
+\contentsline {section}{\numberline {A.2}More Operators}{48}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Rotation Gates}{48}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}Controlled-U Gates}{49}{subsection.A.2.2}%
+\contentsline {section}{\numberline {A.3}Spectral Decomposition Theorem}{49}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Polar Decomposition}{50}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Singular Value Decomposition}{50}{section.A.5}%
+\contentsline {chapter}{\numberline {B}Quantum Information}{51}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Fundamental Concepts}{51}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Information and Reversibility}{51}{subsection.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2}Reversible Copying}{51}{subsection.B.1.2}%
+\contentsline {section}{\numberline {B.2}Pure States and Mixed States}{51}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Density Operators}{52}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}Partial Trace and Reduced Density Operators}{52}{subsection.B.3.1}%
+\contentsline {subsection}{\numberline {B.3.2}Lemma on Pure-State Density Matrices}{52}{subsection.B.3.2}%
+\contentsline {section}{\numberline {B.4}Separability and Entanglement}{52}{section.B.4}%
+\contentsline {section}{\numberline {B.5}Bell States}{53}{section.B.5}%
+\contentsline {section}{\numberline {B.6}Schmidt Decomposition}{53}{section.B.6}%
+\contentsline {section}{\numberline {B.7}Measures of Entanglement}{53}{section.B.7}%
+\contentsline {subsection}{\numberline {B.7.1}Pure-State Measures}{53}{subsection.B.7.1}%
+\contentsline {subsection}{\numberline {B.7.2}Mixed-State Measures}{54}{subsection.B.7.2}%
+\contentsline {chapter}{\numberline {C}Circuit Identities}{55}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Glossary of Terms}{58}{appendix.D}%
+\contentsline {chapter}{\numberline {E}Reference Equations}{60}{appendix.E}%
+\contentsline {chapter}{Bibliography}{61}{appendix.E}%

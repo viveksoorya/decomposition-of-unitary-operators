@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{dragEnterEvent}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{event}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{current\PYGZus{}gate} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}CONNECTOR\PYGZdq{}}\PYG{p}{:}
+        \PYG{n}{event}\PYG{o}{.}\PYG{n}{ignore}\PYG{p}{();} \PYG{k}{return}
+    \PYG{k}{if} \PYG{n}{event}\PYG{o}{.}\PYG{n}{mimeData}\PYG{p}{()}\PYG{o}{.}\PYG{n}{hasText}\PYG{p}{():}
+        \PYG{n}{text} \PYG{o}{=} \PYG{n}{event}\PYG{o}{.}\PYG{n}{mimeData}\PYG{p}{()}\PYG{o}{.}\PYG{n}{text}\PYG{p}{()}
+        \PYG{k}{if} \PYG{n}{text}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}MOVE:\PYGZdq{}}\PYG{p}{):}
+            \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{gate\PYGZus{}name}\PYG{p}{,} \PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{\PYGZus{}} \PYG{o}{=} \PYG{n}{text}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}:\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{gate\PYGZus{}name} \PYG{o}{=} \PYG{n}{text}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{show\PYGZus{}shadow}\PYG{p}{(}\PYG{n}{gate\PYGZus{}name}\PYG{p}{)}
+        \PYG{n}{event}\PYG{o}{.}\PYG{n}{acceptProposedAction}\PYG{p}{()}
+\end{Verbatim}

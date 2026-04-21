@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{TestCircuitModelInitialization}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{test\PYGZus{}default\PYGZus{}initialization}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{model} \PYG{o}{=} \PYG{n}{CircuitModel}\PYG{p}{()}
+        \PYG{k}{assert} \PYG{n}{model}\PYG{o}{.}\PYG{n}{num\PYGZus{}qubits} \PYG{o}{==} \PYG{l+m+mi}{3}
+
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{TestMultiQubitGateOperations}\PYG{p}{:}
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{test\PYGZus{}cnot\PYGZus{}placement}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{model} \PYG{o}{=} \PYG{n}{CircuitModel}\PYG{p}{(}\PYG{n}{num\PYGZus{}qubits}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{)}
+        \PYG{n}{model}\PYG{o}{.}\PYG{n}{add\PYGZus{}gate}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}CX\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{target\PYGZus{}index}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+        \PYG{n}{ops} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{get\PYGZus{}operations}\PYG{p}{()}
+        \PYG{k}{assert} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{ops}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{1}
+        \PYG{k}{assert} \PYG{n}{ops}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}gate\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}CX\PYGZsq{}}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if} \PYG{n}{gate\PYGZus{}type} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}RX\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}RY\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}RZ\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}P\PYGZdq{}}\PYG{p}{]:}
+    \PYG{n}{text}\PYG{p}{,} \PYG{n}{ok} \PYG{o}{=} \PYG{n}{QInputDialog}\PYG{o}{.}\PYG{n}{getText}\PYG{p}{(}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{view}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Rotation Angle\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Enter Angle (radians):\PYGZdq{}}\PYG{p}{,}
+        \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}1.57\PYGZdq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{ok} \PYG{o+ow}{and} \PYG{n}{text}\PYG{p}{:}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{n}{params} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{text}\PYG{p}{)}
+        \PYG{k}{except} \PYG{n+ne}{ValueError}\PYG{p}{:}
+            \PYG{k}{return}
+\end{Verbatim}

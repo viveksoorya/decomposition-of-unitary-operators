@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{debounce\PYGZus{}timer} \PYG{o}{=} \PYG{n}{QTimer}\PYG{p}{()}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{debounce\PYGZus{}timer}\PYG{o}{.}\PYG{n}{setInterval}\PYG{p}{(}\PYG{l+m+mi}{600}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{debounce\PYGZus{}timer}\PYG{o}{.}\PYG{n}{setSingleShot}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{debounce\PYGZus{}timer}\PYG{o}{.}\PYG{n}{timeout}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{on\PYGZus{}code\PYGZus{}parsed}\PYG{p}{)}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{on\PYGZus{}code\PYGZus{}parsed}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+    \PYG{n}{code} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{view}\PYG{o}{.}\PYG{n}{code\PYGZus{}view}\PYG{o}{.}\PYG{n}{get\PYGZus{}code}\PYG{p}{()}
+    \PYG{n}{new\PYGZus{}ops} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{parser}\PYG{o}{.}\PYG{n}{parse\PYGZus{}to\PYGZus{}model}\PYG{p}{(}\PYG{n}{code}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{num\PYGZus{}qubits}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{new\PYGZus{}ops} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{operations} \PYG{o}{=} \PYG{n}{new\PYGZus{}ops}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{redraw\PYGZus{}circuit\PYGZus{}from\PYGZus{}model}\PYG{p}{()}
+\end{Verbatim}

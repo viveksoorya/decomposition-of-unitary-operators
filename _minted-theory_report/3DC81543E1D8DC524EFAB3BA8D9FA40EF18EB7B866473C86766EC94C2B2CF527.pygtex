@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{run\PYGZus{}simulation}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+    \PYG{n}{counts}\PYG{p}{,} \PYG{n}{statevector} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{model}\PYG{o}{.}\PYG{n}{run\PYGZus{}simulation}\PYG{p}{()}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{view}\PYG{o}{.}\PYG{n}{viz\PYGZus{}view}\PYG{o}{.}\PYG{n}{plot\PYGZus{}histogram}\PYG{p}{(}\PYG{n}{counts}\PYG{p}{)}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}update\PYGZus{}qubit\PYGZus{}visualizations}\PYG{p}{(}\PYG{n}{statevector}\PYG{p}{)}
+    \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{view}\PYG{o}{.}\PYG{n}{right\PYGZus{}tabs}\PYG{o}{.}\PYG{n}{setCurrentIndex}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}
