@@ -107,7 +107,7 @@
 \contentsline {subsection}{\numberline {A.2.1}Rotation Gates}{48}{subsection.A.2.1}%
 \contentsline {subsection}{\numberline {A.2.2}Controlled-U Gates}{49}{subsection.A.2.2}%
 \contentsline {section}{\numberline {A.3}Spectral Decomposition Theorem}{49}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Polar Decomposition}{50}{section.A.4}%
+\contentsline {section}{\numberline {A.4}Polar Decomposition}{49}{section.A.4}%
 \contentsline {section}{\numberline {A.5}Singular Value Decomposition}{50}{section.A.5}%
 \contentsline {chapter}{\numberline {B}Quantum Information}{51}{appendix.B}%
 \contentsline {section}{\numberline {B.1}Fundamental Concepts}{51}{section.B.1}%

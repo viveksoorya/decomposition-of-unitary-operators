@@ -1,0 +1,12 @@
+class TestCircuitModelInitialization:
+    def test_default_initialization(self):
+        model = CircuitModel()
+        assert model.num_qubits == 3
+
+class TestMultiQubitGateOperations:
+    def test_cnot_placement(self):
+        model = CircuitModel(num_qubits=3)
+        model.add_gate('CX', 0, 0, target_index=2)
+        ops = model.get_operations()
+        assert len(ops) == 1
+        assert ops[0]['gate'] == 'CX'

@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  21 APR 2026 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.1)  21 APR 2026 23:51
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **theory_report.tex
 (./theory_report.tex
@@ -920,7 +920,7 @@ LaTeX Info: Redefining \\ on input line 3131.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -945,14 +945,11 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-runsystem(uname -s > "theory_report.w18")...executed.
 
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
 
-(./theory_report.w18)
-runsystem(rm -- "theory_report.w18")...executed.
-
-)
-(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip72
 \fb@frw=\dimen330
@@ -976,9 +973,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks56
 \c@listing=\count351
 )
-runsystem(mkdir -p _minted-theory_report)...executed.
+runsystem(mkdir -p _minted-theory_report)...disabled (restricted).
 
 
+
+! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \usemintedstyle
+                    {colorful}
+? 
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
@@ -1186,13 +1193,22 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 \c@theorem=\count366
-runsystem(which pygmentize && touch theory_report.aex)...executed.
+runsystem(which pygmentize && touch theory_report.aex)...disabled (restricted).
 
-runsystem(rm theory_report.aex)...executed.
 
+
+! Package minted Error: You must have `pygmentize' installed to use this packag
+e.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \begin{document}
+                      
+? 
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
 9.
-
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./theory_report.aux)
@@ -1598,7 +1614,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 132
-2.
+3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -1606,7 +1622,7 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-Overfull \hbox (4.00342pt too wide) detected at line 1337
+Overfull \hbox (4.00342pt too wide) detected at line 1338
 \U/euf/m/n/12 k [] []\OT1/lmr/m/n/12 (2) \OMS/lmsy/m/n/12 ^^H []\OT1/lmr/m/n/12
  (2) []\OML/lmm/m/it/12 ;  \U/euf/m/n/12 p \OT1/lmr/m/n/12 = []\OMS/lmsy/m/n/12
  f\OML/lmm/m/it/12 iXX;  iYY;  iZZ\OMS/lmsy/m/n/12 g []\OML/lmm/m/it/12 :
@@ -1642,20 +1658,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 3.
-
-LaTeX Warning: Reference `thm:kraus-cirac' on page 1 undefined on input line 14
-62.
-
-
-LaTeX Warning: Reference `sec:kak' on page 1 undefined on input line 1487.
-
 [25
 
 ]
-
-LaTeX Warning: Reference `thm:kraus-cirac' on page 1 undefined on input line 15
-30.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1678,9 +1683,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [27]
-
-LaTeX Warning: Reference `sec:kak' on page 1 undefined on input line 1624.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1754,17 +1756,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35]
 
-LaTeX Warning: Reference `subsec:zy-xvar' on page 1 undefined on input line 211
-3.
-
-
-LaTeX Warning: Reference `sec:kak' on page 1 undefined on input line 2126.
-
-
-LaTeX Warning: Reference `thm:kraus-cirac' on page 1 undefined on input line 21
-27.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1815,7 +1806,7 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
 )
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 2291.
+t line 2290.
 \openout4 = `theory_report.pyg'.
 
 
@@ -2001,23 +1992,17 @@ Appendix E.
 
 
 ] (./theory_report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `theory_report.out' has not changed.
 (rerunfilecheck)             Checksum: A03B3C8EA55C6E9F246DCA3792F6ECF0;22666.
-runsystem(rm theory_report.pyg)...executed.
+runsystem(rm theory_report.pyg)...disabled (restricted).
 
  ) 
 Here is how much of TeX's memory you used:
- 38984 strings out of 476091
- 773640 string characters out of 5794082
+ 39014 strings out of 476091
+ 774541 string characters out of 5794082
  1896330 words of memory out of 5000000
- 57927 multiletter control sequences out of 15000+600000
- 640963 words of font info for 314 fonts, out of 8000000 for 9000
+ 57962 multiletter control sequences out of 15000+600000
+ 640876 words of font info for 313 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,19n,118p,1652b,1608s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
@@ -2041,10 +2026,10 @@ exmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 tk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on theory_report.pdf (73 pages, 646957 bytes).
+Output written on theory_report.pdf (73 pages, 645739 bytes).
 PDF statistics:
- 1411 PDF objects out of 1440 (max. 8388607)
- 1267 compressed objects within 13 object streams
+ 1415 PDF objects out of 1440 (max. 8388607)
+ 1271 compressed objects within 13 object streams
  325 named destinations out of 1000 (max. 500000)
  66045 words of extra memory for PDF output out of 74296 (max. 10000000)
 

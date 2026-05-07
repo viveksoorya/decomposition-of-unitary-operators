@@ -858,9 +858,8 @@ $O(\log^c(m/\varepsilon))$ gates from the set. The total gate count is $O(m\log^
 Having looked at the criteria that qualifies a gate set to approximate single qubit unitaries, let us now look at some standard decompositions of single qubit unitaries, ie gates that help approximate single-qubit unitaries and their sequencing.
 
 \section{Decomposition of Single-Qubit Unitaries}
-
+\label{sec:zy}
 \subsection{Z-Y Decomposition}
-
 \begin{theorem}[Z-Y Decomposition]
 	\label{thm:zy}
 	Any single-qubit unitary $U$ can be written as
@@ -921,6 +920,7 @@ Having looked at the criteria that qualifies a gate set to approximate single qu
 \end{proof}
 
 \subsection{The Z-X Variant}
+\label{subsec:zy-xvar}
 
 An analogous decomposition holds using $\Rx$ in place of $\Ry$. Computing $\Rz(\beta)\Rx(\delta)$:
 \[
@@ -984,7 +984,7 @@ As we step into the slightly more complicated world of multi-qubit gates, it pay
 		ABC & = \Rz(\beta)\,\Ry\!\left(\tfrac{\gamma}{2}\right)
 		\Ry\!\left(-\tfrac{\gamma}{2}\right)\Rz\!\left(-\tfrac{\delta+\beta}{2}\right)
 		\Rz\!\left(\tfrac{\delta-\beta}{2}\right)                 \\
-		    & = \Rz(\beta)\, I \,\Rz(-\beta) = I. \quad\checkmark
+		    & = \Rz(\beta)\, I \,\Rz(-\beta) = I. 
 	\end{align*}
 
 	\begin{figure}[htbp]
@@ -1026,10 +1026,10 @@ this yields a complete universality statement for multi-qubit computation.
 
 \begin{proof}
 	The proof proceeds in two steps. First, any single-qubit gate $U$ can be implemented exactly
-	using $\Rx$, $\Ry$, and $\Rz$ rotations via the Z-Y decomposition (\\Cref{thm:zy}). Second,
-	the $ABC$ factorisation (\\Cref{thm:abc}) shows that any controlled-$U$ gate $\cU$ can be
+	using $\Rx$, $\Ry$, and $\Rz$ rotations via the Z-Y decomposition (\Cref{thm:zy}). Second,
+	the $ABC$ factorisation (\Cref{thm:abc}) shows that any controlled-$U$ gate $\cU$ can be
 	implemented using two $\CNOT$ gates and single-qubit gates. The Gray code argument
-	(\\Cref{sec:graycodearg}) then lifts this to arbitrary $n$-qubit unitaries: by induction on
+	(\Cref{sec:graycodearg}) then lifts this to arbitrary $n$-qubit unitaries: by induction on
 	$n$, any $n$-qubit unitary can be expressed as a product of single-qubit gates and $\CNOT$
 	gates, with no approximation required.
 \end{proof}
@@ -1160,6 +1160,7 @@ arbitrary $n$-qubit unitaries.
 % ── KAK Decomposition ────────────────────────────────────────────────────────
 
 \section{The KAK Decomposition}
+\label{sec:kak}
 
 The Z-Y decomposition of \Cref{thm:zy} tells us everything about single-qubit unitaries: any
 element of $SU(2)$ can be expressed as a product of three rotation gates. The natural next
@@ -1177,10 +1178,10 @@ where $A_1, A_2, B_1, B_2 \in SU(2)$ are single-qubit unitaries (the ``local'' p
 \begin{figure}[h]
 	\centering
 	\begin{quantikz}
-		\lstick{1} & \gate{A_1} & \gate{U'} & \gate{B_1} \\
-		\lstick{2} & \gate{A_2} & \gate{U'} & \gate{B_2}
+		\lstick[2]{$\ket{\psi}$} & \gate{A_1} & \gate[2]{U'} & \gate{B_1} &  \\
+		 & \gate{A_2} &  & \gate{B_2} 
 	\end{quantikz}
-	\caption{KAK decomposition of a two-qubit unitary: $U = (A_1 \otimes A_2)\,U'\,(B_1 \otimes B_2)$. The local unitaries $A_i$ and $B_i$ require no CNOT gates; only the entangling core $U'$ (shown as matching gates on both qubits) requires CNOT gates (1--3 depending on the gate).}
+	\caption{KAK decomposition of a two-qubit unitary: $U = (A_1 \otimes A_2)\,U'\,(B_1 \otimes B_2)$. The local unitaries $A_i$ and $B_i$ require no CNOT gates; only the entangling core $U'$ requires CNOT gates (1--3 depending on the gate).}
 	\label{fig:kak-circuit}
 \end{figure}
 
@@ -1394,7 +1395,7 @@ after appropriate reordering. Once the coordinates are known, the local unitarie
 $A_1, A_2, B_1, B_2$ are recovered from the diagonalising transformation.
 
 \begin{theorem}[Kraus-Cirac, \cite{kraus2001}]
-	\label{kraus-cirac}
+	\label{thm:kraus-cirac}
 	Every two-qubit unitary $U \in SU(4)$ admits the decomposition
 	\[
 		U = (A_1 \otimes A_2)\,e^{i(c_x X\otimes X + c_y Y\otimes Y + c_z Z\otimes Z)}\,(B_1 \otimes B_2),
@@ -1458,8 +1459,7 @@ any $n$-qubit unitary can be exactly decomposed into single-qubit gates and CNOT
 (\Cref{thm:sq-cnot-univ}), and that the CNOT count is $O(4^n)$ (\Cref{sec:graycodearg}).
 We know that the non-local content of a two-qubit gate is captured by three real
 non-local parameters $(c_x, c_y, c_z)$ via the KAK decomposition, and that these parameters can be
-read off from the gate's magic-basis representation via the Kraus-Cirac procedure
-(\Cref{thm:kraus-cirac}). What Part~I does not tell us is how \emph{few} gates are genuinely
+read off from the gate's magic-basis representation via the Kraus-Cirac procedure. What Part~I does not tell us is how \emph{few} gates are genuinely
 necessary.
 
 This chapter turns to the research literature to answer that question. The narrative runs
@@ -1484,7 +1484,7 @@ A two-qubit unitary $U \in SU(4)$ acts on a four-dimensional Hilbert space. From
 degrees-of-freedom count, $SU(4)$ has dimension $15$, while the local subgroup
 $SU(2) \otimes SU(2)$ has dimension $6$. The non-local content of $U$ therefore lives in a
 $15 - 6 - 6 = 3$-dimensional space. This counting argument, made precise by the KAK
-decomposition of \Cref{sec:kak}, says that up to single-qubit operations, a two-qubit gate
+decomposition, says that up to single-qubit operations, a two-qubit gate
 is characterised by exactly three real parameters $(c_x, c_y, c_z)$.
 
 Before Vidal-Dawson and Vatan-Williams, it was known that three CNOT gates are sufficient
@@ -1620,9 +1620,8 @@ both necessary and sufficient for any gate with all three parameters non-zero.
 
 The division of labour is precise. Vidal and Dawson prove the number: three, and show which
 gates need only two. Vatan and Williams prove the circuits: exactly how to build a three-CNOT
-(or two-CNOT) implementation for any gate you can specify. The parameter picture of
-\Cref{sec:kak} is the common language. A gate's three non-local parameters determine its CNOT
-tier, and the Kraus-Cirac decomposition of \cref{kraus-cirac} tells you what those
+(or two-CNOT) implementation for any gate you can specify. A gate's three non-local parameters determine its CNOT
+tier, and the Kraus-Cirac decomposition tells you what those
 parameters are.
 
 % ── Section 2: Three-Qubit Entanglement Structure ────────────────────────────
@@ -2110,7 +2109,7 @@ $\Rz\Ry\Rz$. The block-ZXZ decomposition writes an $n$-qubit gate as $D_Z U_X D_
 exactly the same alternating-axis structure. The Hadamard conjugation identity
 $H\Rz(\theta)H = \Rx(\theta)$ of \Cref{cor:h-conj-rot} is the tool that allows $Z$-type
 blocks to be converted to $X$-type blocks at the interface, just as the single-qubit identity
-$H\Rz(\theta)H = \Rx(\theta)$ is used in \Cref{subsec:zy-xvar} to pass between Z-Y and Z-X
+$H\Rz(\theta)H = \Rx(\theta)$ is used in \Cref{thm:zy} to pass between Z-Y and Z-X
 variants of the single-qubit decomposition. The circuit identities of Part~I are not just
 background tools; they are the operational mechanism that makes the block-ZXZ counting
 improvement possible.
@@ -2123,7 +2122,7 @@ improvement possible.
 This chapter has traced a complete narrative from the two-qubit case to the general-$n$
 case, with the entanglement structure of three-qubit states as the essential backdrop.
 
-For two-qubit gates, the three-parameter picture of \Cref{sec:kak} and the Kraus-Cirac
+For two-qubit gates, the three-parameter picture of KAK decomposition and the Kraus-Cirac
 decomposition of \Cref{thm:kraus-cirac} reduce the question of CNOT count to the question
 of how many independent non-local parameters a gate has. The answer is three for a generic
 $SU(4)$ gate, and the papers of Vidal-Dawson and Vatan-Williams together show that three
@@ -2576,7 +2575,7 @@ The following conjugation identities are used throughout the decomposition proof
 		\begin{pmatrix}\cos\frac{\theta}{2}&-\sin\frac{\theta}{2}\\\sin\frac{\theta}{2}&\cos\frac{\theta}{2}\end{pmatrix}
 		\begin{pmatrix}0&1\\1&0\end{pmatrix}                                                                                   \\
 		 & = \begin{pmatrix}\cos\frac{\theta}{2}&\sin\frac{\theta}{2}\\-\sin\frac{\theta}{2}&\cos\frac{\theta}{2}\end{pmatrix}
-		= \Ry(-\theta). \qquad\checkmark
+		= \Ry(-\theta). 
 	\end{align*}
 
 	For the second identity:
@@ -2586,7 +2585,7 @@ The following conjugation identities are used throughout the decomposition proof
 		\begin{pmatrix}e^{-i\theta/2}&0\\0&e^{i\theta/2}\end{pmatrix}
 		\begin{pmatrix}0&1\\1&0\end{pmatrix}
 		= \begin{pmatrix}e^{i\theta/2}&0\\0&e^{-i\theta/2}\end{pmatrix}
-		= \Rz(-\theta). \qquad\checkmark \qedhere
+		= \Rz(-\theta). \qedhere
 	\end{align*}
 \end{proof}
 
@@ -2610,18 +2609,6 @@ differ as 2-qubit gates for $\theta \not\equiv 0 \pmod{2\pi}$.
 	$N = \sum_i \lambda_i \oket{i}{i}$,
 	where $\{\ket{i}\}$ is an orthonormal eigenbasis and $\lambda_i$ are the eigenvalues.
 \end{theorem}
-
-\begin{proof}
-	Let $M$ be normal and let $P$, $Q = I-P$ be orthogonal projectors. Then
-	$M = PMP + PMQ + QMP + QMQ$.
-	For a normal operator the cross terms vanish: $PMQ = 0$ and $QMP = 0$, giving $M = PMP + QMQ$.
-	Normality of $QMQ$ follows from:
-	\[
-		(QMQ)(QMQ)^\dagger = QMQM^\dagger Q = QM^\dagger QMQ = (QMQ)^\dagger(QMQ),
-	\]
-	where the middle step uses $MM^\dagger = M^\dagger M$. By induction on dimension, $QMQ$ is
-	diagonalisable, completing the decomposition.
-\end{proof}
 
 For Hermitian operators, eigenvalues $\lambda_i$ are real and the spectral form
 $H = \sum_i \lambda_i P_i$ represents a physical observable: eigenvalues are the possible
@@ -2947,7 +2934,7 @@ the other.
 		 & = \CNOT_{ij}\ket{a\oplus(a\oplus b)}\ket{a\oplus b}
 		= \CNOT_{ij}\ket{b}\ket{a\oplus b}                     \\
 		 & = \ket{b}\ket{(a\oplus b)\oplus b}
-		= \ket{b}\ket{a}. \quad\checkmark \qedhere
+		= \ket{b}\ket{a}. \qedhere
 	\end{align*}
 \end{prop}
 
@@ -2992,7 +2979,7 @@ opportunities. It also sets a lower bound: as Vatan and Williams showed
 		 & = (H\otimes H)\,\CNOT_{ij}\,\ket{+-} \\
 		 & = (H\otimes H)\,\ket{--} = \ket{11}.
 	\end{align*}
-	Carrying out the remaining two basis cases yields the matrix of $\CNOT_{ji}$. \qed
+	Carrying out the remaining two basis cases yields the matrix of $\CNOT_{ji}$. 
 \end{proof}
 
 
